@@ -5,9 +5,6 @@ MAINTAINER Chrometaro <chrometaro@gmail.com>
 COPY ./yum.repos.d/ /etc/yum.repos.d/
 
 ADD https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
-ADD https://ftp.postgresql.org/pub/binary/v8.4.2/linux/rpms/redhat/rhel-5-x86_64/compat-postgresql-libs-4-1PGDG.rhel5.x86_64.rpm  ./
-RUN rpm -i compat-postgresql-libs-4-1PGDG.rhel5.x86_64.rpm \
- && rm compat-postgresql-libs-4-1PGDG.rhel5.x86_64.rpm
 
 RUN yum update -y \
  && yum install -y \
