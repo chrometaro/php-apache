@@ -2,9 +2,6 @@ FROM centos:5.11
 
 MAINTAINER Chrometaro <chrometaro@gmail.com>
 
-RUN echo 'LANG="ja_JP.UTF-8"' /etc/sysconfig/i18n \
- && echo $'ZONE="Asia/Tokyo"\nUTC=false\n' > /etc/sysconfig/clock
-
 COPY ./yum.repos.d/ /etc/yum.repos.d/
 
 ADD https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
