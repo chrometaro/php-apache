@@ -22,6 +22,7 @@ RUN yum update -y \
     php-pgsql \
     php-xml \
     sudo \
+ && yum clean all \
  && pear install \
     Mail-1.2.0 \
     Mail_Mime-1.8.1 \
