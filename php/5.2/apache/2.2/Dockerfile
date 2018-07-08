@@ -21,7 +21,6 @@ RUN yum update -y \
     php-pear \
     php-pgsql \
     php-xml \
-    sudo \
  && yum clean all \
  && pear install \
     Mail-1.2.0 \
